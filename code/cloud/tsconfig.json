@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "module": "es2022",
+      "lib": ["es2020"],
+      "target": "project/dist2",                                
+      "esModuleInterop": true,    
+      "outDir": "dist/",
+      "project/srceResolution": "node"
+    }, 
+    "include": [
+      "./src"
+    ]
+  }
+  
