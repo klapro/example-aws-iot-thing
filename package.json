@@ -1,33 +1,34 @@
 {
-  "name": "example-aws-iot-thing",
-  "version": "1.0.0",
-  "description": "Example for AWS IOS thing code",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "build": "cd ./code/app && npx tsc",
-    "start": "node ./code/app/dist/index.js",
-    "execute": "npm run build && npm run start",
-    "devops": "cd ./code/cloud && npx tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/klapro/example-aws-iot-thing.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/klapro/example-aws-iot-thing/issues"
-  },
-  "homepage": "https://github.com/klapro/example-aws-iot-thing#readme",
-  "dependencies": {
-    "@types/aws-iot-device-sdk": "^2.2.4",
-    "aws-iot-device-sdk": "^2.2.12",
-    "aws-iot-device-sdk-v2": "^1.8.9"
-  },
-  "devDependencies": {
-    "typescript": "^4.8.4"
-  }
+    "name": "app",
+    "version": "1.0.0",
+    "description": "Example for AWS IOS thing code",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "build": "npx tsc",
+        "start": "node dist/index.js",
+        "deploy": "cd cloud && cdk deploy",
+        "synth": "cd cloud && cdk synth",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/klapro/example-aws-iot-thing.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/klapro/example-aws-iot-thing/issues"
+    },
+    "homepage": "https://github.com/klapro/example-aws-iot-thing#readme",
+    "dependencies": {
+        "@types/aws-iot-device-sdk": "^2.2.4",
+        "@types/aws-lambda": "^8.10.108",
+        "aws-iot-device-sdk": "^2.2.12",
+        "aws-iot-device-sdk-v2": "^1.8.9"
+    },
+    "devDependencies": {
+        "typescript": "^4.8.4"
+    }
 }
